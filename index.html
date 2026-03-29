@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <title>Sumon & Lamia Story</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial;
+            text-align: center;
+            background: #ffeef2;
+            transition: 0.4s;
+        }
+        .step {
+            display: none;
+            padding: 60px 20px;
+        }
+        h1 { font-size: 40px; }
+        p  { font-size: 22px; }
+
+        button {
+            padding: 12px 25px;
+            font-size: 20px;
+            border: none;
+            background: white;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover { background: #ffd6e3; }
+    </style>
+</head>
+<body>
+
+    <!-- Step 1 -->
+    <div id="step1" class="step" style="display:block; background:#ffeff4;">
+        <h1>স্বাগতম সুরাইয়া 🌸</h1>
+        <p>আজ দেখো সুমন ও লামিয়ার ফানি লাভ স্টোরি!</p>
+        <button onclick="go(2)">চল শুরু করি ➜</button>
+    </div>
+
+    <!-- Step 2 -->
+    <div id="step2" class="step" style="background:#e3f7ff;">
+        <h1>সুমনের বাড়ি – সাতক্ষীরা</h1>
+        <p>সুমন ছোটবেলায় খুবই শান্ত ছিল…  
+        কিন্তু বড় হয়ে প্রেমে হাই স্পিডে চলেছে 😆</p>
+        <button onclick="go(3)">পরের ধাপ ➜</button>
+    </div>
+
+    <!-- Step 3 -->
+    <div id="step3" class="step" style="background:#fff7e3;">
+        <h1>লামিয়ার বাড়ি – খুলনা</h1>
+        <p>লামিয়া সুন্দর, স্মার্ট, আর ভীষণ মিশুক।  
+        তার ফ্যান ফলোয়ারের সংখ্যা সবসময়ই বেশি 😄</p>
+        <button onclick="go(4)">পরবর্তী ➜</button>
+    </div>
+
+    <!-- Step 4 -->
+    <div id="step4" class="step" style="background:#e9e7ff;">
+        <h1>সুমনের প্রেম সংখ্যা 😎</h1>
+        <p>হ্যাঁ! বিয়ের আগে সুমন <b>২০টা প্রেম</b> করেছে!  
+        মাথা নষ্ট স্পিড! 🚀</p>
+        <button onclick="go(5)">পরের ধাপ ➜</button>
+    </div>
+
+    <!-- Step 5 -->
+    <div id="step5" class="step" style="background:#e6ffe6;">
+        <h1>লামিয়ার প্রেম সংখ্যা 😍</h1>
+        <p>লামিয়া কিন্তু পিছিয়ে নেই!  
+        সে করেছে মোট <b>৯৯টা প্রেম</b>! 🤯🔥</p>
+        <button onclick="go(6)">চল আগাই ➜</button>
+    </div>
+
+    <!-- Step 6 -->
+    <div id="step6" class="step" style="background:#ffe6e6;">
+        <h1>অবশেষে তারা একসাথে 💞</h1>
+        <p>যত প্রেম–ট্রমই থাকুক…  
+        সুমন ও লামিয়া অবশেষে একে অপরকে বেছে নিয়েছে ❤️</p>
+        <button onclick="go(7)">শেষ ধাপ ➜</button>
+    </div>
+
+    <!-- Step 7 -->
+    <div id="step7" class="step" style="background:#fff0cc;">
+        <h1>হ্যাপি এন্ডিং 🎉</h1>
+        <p>এখন তারা দুজন দুজনকে পেয়ে খুবই খুশি 😊  
+        তাদের জন্য অনেক শুভকামনা রইলো 💐</p>
+        <button onclick="go(1)">আবার শুরু করি 🔁</button>
+    </div>
+
+    <script>
+        function go(step) {
+            let all = document.querySelectorAll(".step");
+            all.forEach(s => s.style.display = "none");
+            document.getElementById("step" + step).style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
